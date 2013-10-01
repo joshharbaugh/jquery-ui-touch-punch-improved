@@ -1,3 +1,6 @@
+# jQuery UI Touch Punch Improved
+## Includes contributed fixes and improvements over the original jQuery UI Touch Punch project, details to follow.
+
 # jQuery UI Touch Punch
 ## Touch Event Support for jQuery UI
 
