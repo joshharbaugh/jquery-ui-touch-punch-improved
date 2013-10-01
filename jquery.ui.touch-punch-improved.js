@@ -15,8 +15,8 @@
   // Detect touch support
   $.support.touch = 'ontouchend' in document;
 
-  // Ignore browsers without touch support
-  if (!$.support.touch) {
+  // Ignore browsers without touch support or mouse support
+  if (!$.support.touch || !$.ui.mouse) {
     return;
   }
 
