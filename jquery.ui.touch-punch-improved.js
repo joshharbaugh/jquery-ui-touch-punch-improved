@@ -1,7 +1,9 @@
 /*!
- * jQuery UI Touch Punch 0.2.2
+ * jQuery UI Touch Punch Improved 0.3
  *
- * Copyright 2011, Dave Furfero
+ * 
+ * Copyright 2013, Chris Hutchinson <chris@brushd.com>
+ * Original jquery-ui-touch-punch Copyright 2011, Dave Furfero
  * Dual licensed under the MIT or GPL Version 2 licenses.
  *
  * Depends:
