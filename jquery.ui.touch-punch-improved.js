@@ -63,7 +63,7 @@
 			return;
 		}
 
-		var touch = pointerEnabled ? event.originalEvent : event.originalEvent.changedTouches[0].
+		var touch = pointerEnabled ? event.originalEvent : event.originalEvent.changedTouches[0],
 				simulatedEvent = document.createEvent('MouseEvents'),
 				coord = fixTouch(touch);
 
