@@ -178,15 +178,15 @@
 		var self = this;
 
 		self.element.on({
-		'touchstart': $.proxy(self, '_touchStart'),
-		'touchmove': $.proxy(self, '_touchMove'),
-		'touchend': $.proxy(self, '_touchEnd'),
-		'pointerDown': $.proxy(self, '_touchStart'),
-		'pointerMove': $.proxy(self, '_touchMove'),
-		'pointerUp': $.proxy(self, '_touchEnd'),
-		'MSPointerDown': $.proxy(self, '_touchStart'),
-		'MSPointerMove': $.proxy(self, '_touchMove'),
-		'MSPointerUp': $.proxy(self, '_touchEnd')
+			'touchstart': $.proxy(self, '_touchStart'),
+			'touchmove': $.proxy(self, '_touchMove'),
+			'touchend': $.proxy(self, '_touchEnd'),
+			'pointerDown': $.proxy(self, '_touchStart'),
+			'pointerMove': $.proxy(self, '_touchMove'),
+			'pointerUp': $.proxy(self, '_touchEnd'),
+			'MSPointerDown': $.proxy(self, '_touchStart'),
+			'MSPointerMove': $.proxy(self, '_touchMove'),
+			'MSPointerUp': $.proxy(self, '_touchEnd')
 		});
 
 		// Call the original $.ui.mouse init method
