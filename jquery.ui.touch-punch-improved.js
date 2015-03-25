@@ -10,7 +10,17 @@
  * jquery.ui.widget.js
  * jquery.ui.mouse.js
  */
-(function ($) {
+(function( factory ) {
+    if ( typeof define === "function" && define.amd ) {
+
+        // AMD. Register as an anonymous module.
+        define([ "jquery", "jquery.ui" ], factory );
+    } else {
+
+        // Browser globals
+        factory( jQuery );
+    }
+}(function ($) {
 	var pointerEnabled = window.navigator.pointerEnabled
 		|| window.navigator.msPointerEnabled;
 
@@ -193,4 +203,4 @@
 		_mouseInit.call(self);
 	};
 
-})(jQuery);
+}));
