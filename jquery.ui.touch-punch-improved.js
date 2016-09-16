@@ -187,17 +187,22 @@
 	mouseProto._mouseInit = function () {
 		var self = this;
 
-		self.element.on({
-			'touchstart': $.proxy(self, '_touchStart'),
-			'touchmove': $.proxy(self, '_touchMove'),
-			'touchend': $.proxy(self, '_touchEnd'),
-			'pointerdown': $.proxy(self, '_touchStart'),
-			'pointermove': $.proxy(self, '_touchMove'),
-			'pointerup': $.proxy(self, '_touchEnd'),
-			'MSPointerDown': $.proxy(self, '_touchStart'),
-			'MSPointerMove': $.proxy(self, '_touchMove'),
-			'MSPointerUp': $.proxy(self, '_touchEnd')
-		});
+		if (pointerEnabled) {
+			self.element.on({
+				'pointerdown': $.proxy(self, '_touchStart'),
+				'pointermove': $.proxy(self, '_touchMove'),
+				'pointerup': $.proxy(self, '_touchEnd'),
+				'MSPointerDown': $.proxy(self, '_touchStart'),
+				'MSPointerMove': $.proxy(self, '_touchMove'),
+				'MSPointerUp': $.proxy(self, '_touchEnd')
+			});
+		} else {
+			self.element.on({
+				'touchstart': $.proxy(self, '_touchStart'),
+				'touchmove': $.proxy(self, '_touchMove'),
+				'touchend': $.proxy(self, '_touchEnd'),
+			});
+		}
 
 		// Call the original $.ui.mouse init method
 		_mouseInit.call(self);
