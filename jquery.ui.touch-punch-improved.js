@@ -69,7 +69,7 @@
 	 */
 	function simulateMouseEvent (event, simulatedType) {
 		// Ignore multi-touch events
-		if ((!pointerEnabled && event.originalEvent.touches.length > 1) || (pointerEnabled && !event.isPrimary)) {
+		if ((!pointerEnabled && event.originalEvent.touches.length > 1) || (pointerEnabled && !event.originalEvent.isPrimary)) {
 			return;
 		}
 
